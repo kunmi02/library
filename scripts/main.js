@@ -14,7 +14,6 @@ let myLibrary = [{
   title: "xxxx@hotmail.com",
   read: "not read"
 }];
-// const add_book_btn = document.getElementById("add_nook");
 
 function myFunction() {
   var x = document.getElementById("myDIV");
@@ -37,7 +36,13 @@ let title = document.getElementById("title").value;
 let author = document.getElementById("author").value;
 let page_num = document.getElementById("page_num").value;
 let read = document.getElementById("read").value;
-new Book(title, author, page_num, read)
+const new_book = new Book(title, author, page_num, read)
+myLibrary.push(new_book);
+showLibrary()
+document.getElementById("title").value = '';
+document.getElementById("author").value = '';
+document.getElementById("page_num").value = '';
+document.getElementById("read").value = '';
 
 }
 
@@ -47,7 +52,7 @@ function deleteBook(book){
 
 }
 
-
+function showLibrary(){
 var html = "<table border='1|1|1'>";
 html+="<tr>"
 html+="<td> Title </td>"
@@ -76,3 +81,5 @@ for (var i = 0; i < myLibrary.length; i++) {
 }
 html+="</table>";
 document.getElementById("box").innerHTML = html;
+}
+showLibrary()
