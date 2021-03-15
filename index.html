@@ -16,7 +16,7 @@
 
     <div>&nbsp</div>
     
-    <div id="myDIV">
+    <div id="myDIV" style="display: none">
         <label for="fname">Book Title:</label><br>
         <input type="text" id="title" name="title"><br>
         <label for="lname">Book Author:</label><br>
@@ -28,11 +28,11 @@
         </select>
         <br>
         <label for="lname">Total number of pages:</label><br>
-        <input type="text" id="page_num" name="page_num"><br><br>
-        <input type="submit" value="Add Book" onclick="addBookToLibrary()">
+        <input type="text" id="pageNumber" name="pageNumber"><br><br>
+        <button id="add_book_library">Add book to library</button>
     </div>
     <div>&nbsp</div>
-    <button onclick="myFunction()">Add Books form</button>
+    <button  id="add_book_button">Add Books form</button>
 
 
     
