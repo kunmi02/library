@@ -22,7 +22,11 @@
         <label for="lname">Book Author:</label><br>
         <input type="text" id="author" name="author" ><br>
         <label for="lname">Have you read the book:</label><br>
-        <input type="text" id="read" name="read"><br>
+        <select name="read" id="read">
+          <option value="read">Read</option>
+          <option value="not read">Not Read</option>
+        </select>
+        <br>
         <label for="lname">Total number of pages:</label><br>
         <input type="text" id="page_num" name="page_num"><br><br>
         <input type="submit" value="Add Book" onclick="addBookToLibrary()">
