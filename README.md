@@ -44,7 +44,7 @@ Contributions, issues and feature requests are welcome! Start by:
 
 ## Author
 
-👤 Suyash Fowdar
+👤 Azeez Ibrahim
 Github: [@kunmi02](https://github.com/kunmi02)
 
 ## Show your Support
