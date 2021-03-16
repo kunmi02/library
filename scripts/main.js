@@ -119,6 +119,10 @@ AddBookToLibraryButton.onclick = () => {
   const author = document.getElementById('author').value;
   const pageNumber = document.getElementById('pageNumber').value;
   const read = document.getElementById('read').value;
+  if ((title === '') || (author === '') || (pageNumber === '') || (read === '')) {
+    alert('Fill in the empty field');
+    return;
+  }
   const NewBook = new Book(title, author, pageNumber, read);
   myLibrary.push(NewBook);
 
