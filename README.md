@@ -26,7 +26,7 @@ A simple JS based App for a Book Library Record.
 
 ## Demo Link
 
-no live demo available yet
+http://akinkunmi.me/library/
 
 ## Contributing
 
