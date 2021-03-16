@@ -35,8 +35,9 @@ function Book(title, author, totalNumberOfPages, read) {
 }
 
 const showLibrary = () => {
-  const body = document.getElementsByTagName('body')[0];
+  const body = document.getElementById('table');
   const tbl = document.createElement('table');
+  body.innerHTML = '';
   tbl.style.width = '100%';
   tbl.setAttribute('border', '1');
   const tbdy = document.createElement('tbody');
