@@ -18,7 +18,7 @@ const myLibrary = [
 ];
 
 const AddBookButton = document.getElementById('add_book_button');
-AddBookButton.onclick = function () {
+AddBookButton.onclick = () => {
   const x = document.getElementById('myDIV');
   if (x.style.display === 'none') {
     x.style.display = 'block';
@@ -34,7 +34,7 @@ function Book(title, author, totalNumberOfPages, read) {
   this.read = read;
 }
 
-function showLibrary() {
+const showLibrary = () => {
   const body = document.getElementsByTagName('body')[0];
   const tbl = document.createElement('table');
   tbl.style.width = '100%';
@@ -92,7 +92,7 @@ function showLibrary() {
       const td03 = document.createElement('td');
       const DeleteButton = document.createElement('button');
       DeleteButton.innerHTML = 'Delete Book';
-      DeleteButton.onclick = function () {
+      DeleteButton.onclick = () => {
         deleteBook(index);
       };
       td03.appendChild(DeleteButton);
@@ -101,7 +101,7 @@ function showLibrary() {
       const td04 = document.createElement('td');
       const ReadButton = document.createElement('button');
       ReadButton.innerHTML = 'Change read status of book';
-      ReadButton.onclick = function () {
+      ReadButton.onclick = () => {
         updateReadStatus(index);
       };
       td04.appendChild(ReadButton);
@@ -111,10 +111,10 @@ function showLibrary() {
   }
   tbl.appendChild(tbdy);
   body.appendChild(tbl);
-}
+};
 
 const AddBookToLibraryButton = document.getElementById('add_book_library');
-AddBookToLibraryButton.onclick = function () {
+AddBookToLibraryButton.onclick = () => {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   const pageNumber = document.getElementById('pageNumber').value;
@@ -129,13 +129,12 @@ AddBookToLibraryButton.onclick = function () {
   showLibrary();
 };
 
-function deleteBook(index) {
-  console.log('This book has been deleted');
+let deleteBook = index => {
   myLibrary.splice(index, 1);
   showLibrary();
-}
+};
 
-function updateReadStatus(index) {
+let updateReadStatus = index => {
   const ReadStatus = myLibrary[index].read;
   if (ReadStatus === 'read') {
     myLibrary[index].read = 'not read';
@@ -146,6 +145,6 @@ function updateReadStatus(index) {
   } else {
     alert('Choose valid options');
   }
-}
+};
 
 showLibrary();

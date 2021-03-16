@@ -15,7 +15,8 @@
     "no-param-reassign": "off",
     "eol-last": "off",
     "arrow-parens": "off",
-    "no-use-before-define":"off"
+    "no-use-before-define":"off",
+    "no-loop-func": "off"
   },
   "ignorePatterns": [
     "dist/",
