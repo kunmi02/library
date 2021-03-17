@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <h1>Books available in your library</h1>
+
+    <div id= "box"></div>
+
+
+    <div>&nbsp</div>
+    
+    <div id="myDIV" style="display: none">
+        <label for="fname">Book Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="lname">Book Author:</label><br>
+        <input type="text" id="author" name="author" ><br>
+        <label for="lname">Have you read the book:</label><br>
+        <select name="read" id="read">
+          <option value="read">Read</option>
+          <option value="not read">Not Read</option>
+        </select>
+        <br>
+        <label for="lname">Total number of pages:</label><br>
+        <input type="text" id="pageNumber" name="pageNumber"><br><br>
+        <button id="add_book_library">Add book to library</button>
+    </div>
+    <div>&nbsp</div>
+    <button  id="add_book_button">Add Books form</button>
+    <div id="table"></div>
+
+
+    
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
